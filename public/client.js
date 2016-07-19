@@ -8,6 +8,8 @@ var j2c = require('j2c')
 var style = require('./style.css')
 var sheet = j2c.sheet(style)
 
+var u = require('./utils')
+
 /* See https://james-forbes.com/?/posts/how-i-use-mithril */
 
 function Component() {
@@ -30,14 +32,5 @@ function Component() {
   }
 }
 
-function component(c) {
-  return {
-    controller: c,
-    view: function(v) {
-      return v()
-    }
-  }
-}
-
 console.log("Mounting component...")
-m.mount(document.getElementById("component"), component(Component))
+m.mount(document.getElementById("component"), u.component(Component))
