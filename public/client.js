@@ -1,6 +1,10 @@
+'use strict';
+
 var m = require('mithril')
-var j2c = require('j2c')
 var packagejson = require('../package.json')
+
+/* CSS modules support ("local" CSS) */
+var j2c = require('j2c')
 var style = require('./style.css')
 var sheet = j2c.sheet(style)
 
@@ -35,4 +39,5 @@ function component(c) {
   }
 }
 
-m.mount(document.body, component(Component))
+console.log("Mounting component...")
+m.mount(document.getElementById("component"), component(Component))

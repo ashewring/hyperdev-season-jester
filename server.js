@@ -17,7 +17,10 @@ browserify.settings({
   transform: ['cssobjectify']
 });
 //provide a browserified file at a path
+// TODO: combine and minify these scripts
+app.get('/utils.js', browserify(__dirname + '/public/utils.js'));
 app.get('/client.js', browserify(__dirname + '/public/client.js'));
+app.get('/example.js', browserify(__dirname + '/public/example.js'));
 
 // http://expressjs.com/en/starter/static-files.html
 // app.use(express.static('public'));
@@ -44,7 +47,7 @@ var dreams = [
   "Wash the dishes"
   ];
 
-console.log(process.env)
+//console.log(process.env)
 
 // listen for requests :)
 listener = app.listen(process.env.PORT, function () {
