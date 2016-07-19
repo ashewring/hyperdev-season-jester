@@ -1,0 +1,7 @@
+Move Browserify commands to shell script (then browserify-middleware is redundant)
+
+Combine and minify scripts
+
+Add watch for use in development
+
+Add source maps
