@@ -1,6 +1,6 @@
-Test watch script (npm run watch)
-
 Minify production scripts
+
+Live reload (CSS change without page refresh?)
 
 Source maps?
 
