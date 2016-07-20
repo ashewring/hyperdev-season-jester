@@ -4,7 +4,9 @@
 	"description": "What am I about?",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node server.js",
+		"build": "mkdir -p static && browserify public/*.js -t cssobjectify -o static/bundle.js",
+		"watch": "mkdir -p static && watchify public/*.js -t cssobjectify -o static/bundle.js --debug --verbose"
 	},
 	"dependencies": {
     "express": "^4.12.4",
