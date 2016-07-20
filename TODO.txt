@@ -1,7 +1,7 @@
-Move Browserify commands to shell script (then browserify-middleware is redundant)
+Test watch script (npm run watch)
 
-Combine and minify scripts
+Minify production scripts
 
-Add watch for use in development
+Source maps?
 
-Add source maps
+Find out how to combine and minify CSS so that it can be cached properly

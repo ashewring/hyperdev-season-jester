@@ -3,24 +3,14 @@
 
 // init project
 var express = require('express');
-var browserify = require('browserify-middleware');
 var app = express();
 
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
-browserify.settings({
-  ignoreMissing: true,
-  insertGlobals: true,
-  basedir: __dirname,
-  rootDir: __dirname,
-  transform: ['cssobjectify']
+app.get("/bundle.js", function (request, response) {
+  response.sendFile(__dirname + '/static/bundle.js');
 });
-//provide a browserified file at a path
-// TODO: combine and minify these scripts
-app.get('/utils.js', browserify(__dirname + '/public/utils.js'));
-app.get('/client.js', browserify(__dirname + '/public/client.js'));
-app.get('/example.js', browserify(__dirname + '/public/example.js'));
 
 // http://expressjs.com/en/starter/static-files.html
 // app.use(express.static('public'));
