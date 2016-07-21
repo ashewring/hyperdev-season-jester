@@ -1,7 +1,5 @@
-Minify production scripts
-
 Live reload (CSS change without page refresh?)
 
-Source maps?
+Source maps during development?
 
 Find out how to combine and minify CSS so that it can be cached properly
