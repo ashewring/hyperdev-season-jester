@@ -1,3 +1,7 @@
+Incorporate babelify to support ES6 syntax:
+
+http://stackoverflow.com/a/33044085
+
 Live reload (CSS change without page refresh?)
 
 Source maps during development?
